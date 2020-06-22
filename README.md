@@ -9,19 +9,19 @@
 
 【4】 有人退出聊天室，则其他人也会收到通知:xxx退出了聊天室
 
-技术分析 ： 1. 服务端需要存储聊天室用户  {name:address}
+技术分析 ： 
+ 
+	      1. 服务端需要存储聊天室用户  {name:address}
                                    [(name,address),]
                                 class User:
                                     def __init__(self,name,address):
                                         self.name = name
                                         self.address = address
-
           2. 网络通信技术 ：  udp
 
           3. 消息发送 ： 使用转发机制
 
           4. 收发消息问题 ： 收发互不干扰 --》 使用不同的进程
-
 
 功能模块分析
 
